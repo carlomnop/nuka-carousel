@@ -363,7 +363,7 @@ export interface CarouselProps {
    * @default false
    */
 
-   rtl?: boolean;
+   rtl?: boolean | false;
 }
 
 export interface CarouselState {
