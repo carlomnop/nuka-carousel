@@ -81,6 +81,12 @@ export interface CarouselSlideRenderControlProps {
    * Infinite mode enabled
    */
   wrapAround: boolean;
+
+  /**
+   * Right To Left Translation
+   */
+
+   rtl: boolean;
 }
 
 export type CarouselRenderControl = (
@@ -351,6 +357,13 @@ export interface CarouselProps {
    * @default false
    */
   withoutControls?: boolean;
+
+  /**
+   * Sets the RTL to default
+   * @default false
+   */
+
+   rtl?: boolean;
 }
 
 export interface CarouselState {
@@ -409,6 +422,12 @@ export interface CarouselState {
    * Is infinite mode enabled
    */
   wrapToIndex: boolean;
+
+  /**
+   * Is RTL
+   */
+
+  rtl: boolean;
 }
 
 export interface PagingDotsProps {
