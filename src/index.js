@@ -993,8 +993,7 @@ export default class Carousel extends React.Component {
     const touchEvents = this.getTouchEvents();
     const mouseEvents = this.getMouseEvents();
     const TransitionControl = Transitions[this.props.transitionMode];
-    const validChildren = getValidChildren(this.props.children);
-    const orderedChildren = this.reverseChildren(children, rtl);
+    const validChildren = getValidChildren(this.props.children, rtl);
     return (
       <div
         className={['slider', this.props.className || ''].join(' ')}
@@ -1077,7 +1076,7 @@ export default class Carousel extends React.Component {
                 deltaX={tx}
                 deltaY={ty}
               >
-                {addAccessibility(orderedChildren, slidesToShow, currentSlide)}
+                {addAccessibility(validChildren, slidesToShow, currentSlide)}
               </TransitionControl>
             )}
           />

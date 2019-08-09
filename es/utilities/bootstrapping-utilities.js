@@ -35,9 +35,9 @@ export var addAccessibility = function addAccessibility(children, slidesToShow, 
     });
   }
 };
-export var getValidChildren = function getValidChildren(children) {
+export var getValidChildren = function getValidChildren(children, rtl) {
   // .toArray automatically removes invalid React children
-  return React.Children.toArray(children);
+  return rtl ? React.Children.toArray(children).reverse() : React.Children.toArray(children);
 };
 
 var findMaxHeightSlide = function findMaxHeightSlide(slides) {

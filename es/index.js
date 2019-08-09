@@ -994,8 +994,7 @@ function (_React$Component) {
       var touchEvents = this.getTouchEvents();
       var mouseEvents = this.getMouseEvents();
       var TransitionControl = Transitions[this.props.transitionMode];
-      var validChildren = getValidChildren(this.props.children);
-      var orderedChildren = this.reverseChildren(children, rtl);
+      var validChildren = getValidChildren(this.props.children, rtl);
       return React.createElement("div", {
         className: ['slider', this.props.className || ''].join(' '),
         style: _extends({}, getSliderStyles(this.props.width, this.props.height), this.props.style),
@@ -1063,7 +1062,7 @@ function (_React$Component) {
           return React.createElement(TransitionControl, _extends({}, getTransitionProps(_this9.props, _this9.state), {
             deltaX: tx,
             deltaY: ty
-          }), addAccessibility(orderedChildren, slidesToShow, currentSlide));
+          }), addAccessibility(validChildren, slidesToShow, currentSlide));
         }
       })), this.renderControls(), this.props.autoGenerateStyleTag && React.createElement("style", {
         type: "text/css",
