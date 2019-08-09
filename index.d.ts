@@ -86,7 +86,7 @@ export interface CarouselSlideRenderControlProps {
    * Right To Left Translation
    */
 
-   rtl: boolean;
+  rightToLeft: boolean;
 }
 
 export type CarouselRenderControl = (
@@ -363,7 +363,7 @@ export interface CarouselProps {
    * @default false
    */
 
-   rtl?: boolean | false;
+  rightToLeft?: boolean | false;
 }
 
 export interface CarouselState {
@@ -427,7 +427,7 @@ export interface CarouselState {
    * Is RTL
    */
 
-  rtl: boolean;
+  rightToLeft: boolean;
 }
 
 export interface PagingDotsProps {

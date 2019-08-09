@@ -87,7 +87,7 @@ function (_React$Component) {
     }];
     _this.childNodesMutationObs = null;
     _this.state = _objectSpread({
-      currentSlide: _this.props.rtl ? _this.props.children.length - _this.props.slidesToShow : _this.props.slideIndex,
+      currentSlide: _this.props.rightToLeft ? _this.props.children.length - _this.props.slidesToShow : _this.props.slideIndex,
       dragging: false,
       easing: _this.props.disableAnimation ? '' : easing.easeCircleOut,
       hasInteraction: false,
@@ -968,8 +968,8 @@ function (_React$Component) {
     }
   }, {
     key: "reverseChildren",
-    value: function reverseChildren(children, rtl) {
-      return rtl ? _toConsumableArray(children).reverse() : children;
+    value: function reverseChildren(children, rightToLeft) {
+      return rightToLeft ? _toConsumableArray(children).reverse() : children;
     }
   }, {
     key: "render",
@@ -987,14 +987,14 @@ function (_React$Component) {
           slidesToShow = _this$props.slidesToShow,
           renderAnnounceSlideMessage = _this$props.renderAnnounceSlideMessage,
           disableAnimation = _this$props.disableAnimation,
-          rtl = _this$props.rtl,
+          rightToLeft = _this$props.rightToLeft,
           children = _this$props.children;
       var duration = this.state.dragging || !this.state.dragging && this.state.resetWrapAroundPosition && this.props.wrapAround || disableAnimation || !this.state.hasInteraction ? 0 : this.props.speed;
       var frameStyles = getFrameStyles(frameOverflow, vertical, framePadding, frameWidth);
       var touchEvents = this.getTouchEvents();
       var mouseEvents = this.getMouseEvents();
       var TransitionControl = Transitions[this.props.transitionMode];
-      var validChildren = getValidChildren(this.props.children, rtl);
+      var validChildren = getValidChildren(this.props.children, rightToLeft);
       return React.createElement("div", {
         className: ['slider', this.props.className || ''].join(' '),
         style: _extends({}, getSliderStyles(this.props.width, this.props.height), this.props.style),
@@ -1126,7 +1126,7 @@ Carousel.propTypes = {
   wrapAround: PropTypes.bool,
   opacityScale: PropTypes.number,
   slideListMargin: PropTypes.number,
-  rtl: PropTypes.bool
+  rightToLeft: PropTypes.bool
 };
 Carousel.defaultProps = {
   afterSlide: function afterSlide() {},
@@ -1173,6 +1173,6 @@ Carousel.defaultProps = {
   withoutControls: false,
   wrapAround: false,
   slideListMargin: 10,
-  rtl: false
+  rightToLeft: false
 };
 export { NextButton, PreviousButton, PagingDots };
