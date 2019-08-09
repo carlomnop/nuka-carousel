@@ -1,6 +1,6 @@
 {
   "name": "nuka-carousel",
-  "version": "4.5.9",
+  "version": "4.5.10",
   "description": "Pure React Carousel",
   "main": "index.js",
   "module": "es/index.js",
@@ -91,7 +91,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kenwheeler/nuka-carousel.git"
+    "url": "https://github.com/carlomnop/nuka-carousel.git"
   },
   "keywords": [
     "react",
@@ -101,8 +101,8 @@
   "author": "Ken Wheeler",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/FormidableLabs/nuka-carousel/issues"
+    "url": "https://github.com/carlomnop/nuka-carousel/issues"
   },
-  "homepage": "https://github.com/FormidableLabs/nuka-carousel",
+  "homepage": "https://github.com/carlomnop/nuka-carousel",
   "sideEffects": false
 }
